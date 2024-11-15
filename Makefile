@@ -11,7 +11,7 @@ all: png
 png: $(PNGS)
 	
 $(PNGS): $(PNGDIR)/%.png: $(PDFDIR)/%.pdf | $(PNGDIR)
-	magick -density 600 $< -alpha remove -quality 90 -resize 50% $@
+	magick -density 800 $< -alpha remove -quality 90 -resize 50% $@
 
 $(PDFS): $(PDFDIR)/%.pdf: %.tex $(CLS) | $(PDFDIR)
 	latexmk -pdf -interaction=nonstopmode -jobname=$(PDFDIR)/$* -use-make $<
