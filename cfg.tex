@@ -1,0 +1,35 @@
+\documentclass{imgs}
+
+\begin{document}
+
+\begin{definition}[Grammar]
+  A \textit{grammar} is a 4-tuple $(V, T, S, P)$ where
+  \begin{itemize}
+    \item $V$ is a finite set of objects (variables)
+    \item $T$ is a finite set of objects (terminal variables)
+    \item $S \in V$ is a symbol (start variable)
+    \item $P$ is a finite set of production rules
+  \end{itemize}
+  We assume that $V$ and $T$ are non-empty and disjoint.
+\end{definition}
+
+\begin{definition}[Context-Free Grammar]
+  A \textit{context-free grammar} is a grammar $(V, T, S, P)$ where
+  all productions in $P$ are of the form
+  \[
+    A \to x
+  \]
+  where $A \in V$ and $x \in (V \cup T)^*$.
+\end{definition}
+
+\begin{definition}[Context-Free Grammar]
+  The language of a grammar is said to be context-free iff there is a context-free grammar $G$ such that $L = L(G)$, where
+  \[
+    L(G) = \left\{ w \in T^* : S \xRightarrow{*} w \right\}
+  \]
+\end{definition}
+
+\end{document}
+
+%#automata
+%#cfg

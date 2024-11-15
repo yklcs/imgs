@@ -1,0 +1,22 @@
+\documentclass{imgs}
+
+\begin{document}
+
+\begin{theorem}[Pumping Lemma for CFLs]
+  For a CFL $L$, there exists a pumping length $p \in \mathbb{N}$
+  such that $\forall w \in L$ with $\abs{w} \geq p$ can be written as
+  \[
+    w = uvxyz
+  \]
+  that meets the following conditions:
+  \begin{enumerate}
+    \item $\abs{vy} \neq 0$
+    \item $\abs{vxy} \leq p$
+    \item $\forall i \geq 0 : uv^ixy^iz \in L$
+  \end{enumerate}
+\end{theorem}
+
+\end{document}
+
+%#automata
+%#cfg

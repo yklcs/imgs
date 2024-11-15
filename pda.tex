@@ -1,0 +1,21 @@
+\documentclass{imgs}
+
+\begin{document}
+
+\begin{definition}[Pushdown Automata]
+  \textit{Pushdown automata} (PDA) are 7-tuples $(Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ where
+  \begin{itemize}
+    \item $Q$ is a finite set of states
+    \item $\Sigma$ is a finite set of input symbols
+    \item $\Gamma$ is a finite set of stack symbols
+    \item $\delta: Q \times \rbk{\Sigma \cup \cbk{\varepsilon}} \times \Gamma \mapsto \text{all finite subsets of } Q \times \Gamma^*$
+    \item $q_0 \in Q$: start state
+    \item $Z_0 \in \Gamma$: start stack symbol
+    \item $F \subset Q$: final states
+  \end{itemize}
+\end{definition}
+
+\end{document}
+
+%#automata
+%#pda

@@ -1,0 +1,40 @@
+\documentclass{imgs}
+
+\begin{document}
+
+\begin{theorem}
+  All regular languages are context-free languages.
+  \begin{proof}
+    Let $L$ be a regular language, and $R$ be the regular expression such that $L = L(R)$.
+    We perform induction on the number of operators in $R$.
+    \begin{description}
+      \item[Basis] $R$ has no operators. This means $R = a$ is a single symbol.
+            Then, the language can be generated with a CFG using a single transition $S \to a$.
+      \item[Induction]
+            Suppose we can represent any regular expression with less than $k$ operators with a CFG.
+            Now we consider the case where $R$ has $n$ operators.
+
+            Let $R_1$ and $R_2$ the operand REs of $R$.
+            By the inductive hypothesis, we can represent $R_1$ and $R_2$ with CFGs with start states $S_1$ and $S_2$, respectively.
+
+            \begin{itemize}
+              \item $R = R_1 + R_2$:
+                    We can create a new CFG with start state $S$ with the production $S \to S_1 \mid S_2$.
+                    This produces $L(R_1 + R_2)$.
+              \item $R = R_1 R_2$:
+                    We can create a new CFG with start state $S$ with the production $S \to S_1 S_2$.
+                    This produces $L(R_1 R_2)$.
+              \item $R = R_1^*$:
+                    We can create a new CFG with start state $S$ with the production $S \to S S_1 \mid \varepsilon$.
+                    This produces $L(R_1^*)$.
+            \end{itemize}
+    \end{description}
+    We can represent any RE with an equivalent CFG.
+    Therefore, every regular language is context-free.
+  \end{proof}
+\end{theorem}
+\end{document}
+
+%#automata
+%#cfl
+%#rl
