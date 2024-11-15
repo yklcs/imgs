@@ -54,7 +54,7 @@
 \def\imgs@footer{
   \textcolor{lightgray}{\footnotesize\texttt{yklcs/imgs -- \DTMnow}}
   \hspace{1em}\hfill
-  \raisebox{\depth}{\qrcode*[height=6mm]{https://github.com/yklcs/imgs/\currfilename}}
+  \raisebox{\depth}{\qrcode*[height=6mm]{https://github.com/yklcs/imgs/blob/main/\currfilename}}
   \hspace{-\margindiff}
 }
 \makeatother
